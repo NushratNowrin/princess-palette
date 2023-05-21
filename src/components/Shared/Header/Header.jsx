@@ -13,7 +13,7 @@ const Header = () => {
 	const handleLogOut = () => {
 		logout()
 			.then((result) => {
-				// Sign-out successful.
+				// Sign-out successful
 			})
 			.catch((error) => {
 			});
