@@ -46,48 +46,62 @@ const Header = () => {
 					<li className='mx-5 font-semibold'>
 						<ActiveLink to='/all-toys'>All Toys</ActiveLink>
 					</li>
-					<li className='mx-5 font-semibold'>
+					{/* <li className='mx-5 font-semibold'>
 						<ActiveLink to='/my-toys'>My Toys</ActiveLink>
 					</li>
 					<li className='mx-5 font-semibold'>
 						<ActiveLink to='/add-a-toy'>Add a Toy</ActiveLink>
+					</li> */}
+                    {
+                        user? (
+                            <li className='mx-5 font-semibold'>
+						<ActiveLink to='/my-toys'>My Toys</ActiveLink>
 					</li>
+                        ): ("")
+                    }
+                    {
+                        user? (
+                            <li className='mx-5 font-semibold'>
+						<ActiveLink to='/add-a-toy'>Add a Toy</ActiveLink>
+					</li>
+                        ): ("")
+                    }
 					<li className='mx-5 font-semibold'>
 						<ActiveLink to='/blogs'>Blogs</ActiveLink>
 					</li>
 				</ul>
 				<div className='h-10 w-28'>
-					{/* {user ? (
+					{user ? (
 						<div className='flex justify-between items-center'>
 							{(user.photoURL != null)? (
 								<img
-									className='h-10 w-10 rounded-full'
+									className='h-10 w-10 mr-3 rounded-full'
 									src={user.photoURL}
 									title={user.email}
 									alt=''
 								/>
 							) : (
 								<img
-									className='h-10 w-10 rounded-full'
+									className='h-10 w-10 mr-3 rounded-full'
 									src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'
 									title={user.email}
 									alt=''
 								/>
 							)}
 
-							<div className='w-16 h-10 '>
+							<div className=' h-10 '>
 								<button
 									onClick={handleLogOut}
-									className=' bg-red-300 px-5 py-2 font-bold text-black rounded-lg hover:bg-red-600 hover:text-lg ease-in-out duration-300'>
+									className=' bg-pink-200 text-black px-5 py-2 font-bold rounded-md hover:bg-pink-300'>
 									Logout
 								</button>
 							</div>
 						</div>
 					) : (
-						<button className=' bg-red-300 px-5 py-2 font-bold text-black rounded-lg hover:bg-red-600 hover:text-lg ease-in-out duration-300'>
+						<button className=' bg-pink-200 text-black px-5 py-2 font-bold rounded-md hover:bg-pink-300'>
 							<ActiveLink to='/login'>Login</ActiveLink>
 						</button>
-					)} */}
+					)}
 				</div>
 			</div>
 		</div>
