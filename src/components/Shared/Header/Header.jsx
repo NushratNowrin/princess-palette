@@ -9,6 +9,7 @@ import { AuthContext } from "../../Provider/AuthProviders";
 const Header = () => {
 	const [open, setOpen] = useState(false);
 	const { user, logout } = useContext(AuthContext);
+    // console.log(user.displayName)
 
 	const handleLogOut = () => {
 		logout()
@@ -77,7 +78,7 @@ const Header = () => {
 								<img
 									className='h-10 w-10 mr-3 rounded-full'
 									src={user.photoURL}
-									title={user.email}
+									title={user.displayName}
 									alt=''
 								/>
 							) : (
@@ -85,7 +86,6 @@ const Header = () => {
 									className='h-10 w-10 mr-3 rounded-full'
 									src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'
 									title={user.email}
-									alt=''
 								/>
 							)}
 
