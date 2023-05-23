@@ -6,19 +6,19 @@ import { FaTwitter, FaFacebookF, FaYoutube } from 'react-icons/fa';
 
 const Footer = () => {
 	return (
-		<div className='mt-20 '>
-			<footer className='text-white footer p-20 bg-violet-900'>
+		<footer className='mt-20 '>
+			<div className='text-white footer p-20 bg-violet-900'>
 				<div>
 					<Link to='/'>
 						<img src={logo} className='w-32' alt='' />
 					</Link>
 				</div>
 				<div>
-					<p>
+					<div>
 						<p className='font-semibold text-lg '>Princess Palette.</p>
 						<br />
 						The great makeup <br /> toys collection <br /> for your princess
-					</p>
+					</div>
 				</div>
 				<div>
 					<span className='footer-title'>Company</span>
@@ -32,7 +32,7 @@ const Footer = () => {
 					<p><span className="text-yellow-300">Phone:</span> +088 01756 091365</p>
 					<p><span className="text-yellow-300">Address:</span> East Rampura, Dhaka</p>
 				</div>
-			</footer>
+			</div>
 
 			{/* Copyright */}
 			<div className='footer items-center p-4 bg-violet-950 text-neutral-content'>
@@ -52,7 +52,7 @@ const Footer = () => {
 					</Link>
 				</div>
 			</div>
-		</div>
+		</footer>
 	);
 };
 
