@@ -81,6 +81,54 @@ const Gallery = () => {
 						className='rounded-box'
 					/>
 				</div>
+				<div className='carousel-item'>
+					<img
+						src={img1}
+						className='rounded-box'
+					/>
+				</div>
+				<div className='carousel-item'>
+					<img
+						src={img2}
+						className='rounded-box'
+					/>
+				</div>
+				<div className='carousel-item'>
+					<img
+						src={img3}
+						className='rounded-box'
+					/>
+				</div>
+				<div className='carousel-item'>
+					<img
+						src={img4}
+						className='rounded-box'
+					/>
+				</div>
+				<div className='carousel-item'>
+					<img
+						src={img1}
+						className='rounded-box'
+					/>
+				</div>
+				<div className='carousel-item'>
+					<img
+						src={img2}
+						className='rounded-box'
+					/>
+				</div>
+				<div className='carousel-item'>
+					<img
+						src={img3}
+						className='rounded-box'
+					/>
+				</div>
+				<div className='carousel-item'>
+					<img
+						src={img4}
+						className='rounded-box'
+					/>
+				</div>
 			</div>
 		</div>
 	);
