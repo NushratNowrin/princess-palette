@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { MdEdit, MdDelete } from "react-icons/md";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const MyToysCard = ({ myToy }) => {
+	const [myToys, setMyToys] = useState(myToy);
+	const handleDelete = (_id) => {
+		fetch(`http://localhost:5000/toys/${_id}`, {
+			method: "DELETE",
+		})
+			.then((res) => res.json())
+			.then((data) => {
+				if (data.deletedCount > 0) {
+					Swal.fire({
+						title: "Delete",
+						text: "Toy has been deleted Successfully",
+						icon: "delete",
+						confirmButtonText: "Okay",
+					});
+					const remaining = myToy.filter((Toy) => Toy._id !== _id);
+					setMyToys(remaining);
+				}
+			});
+	};
 	const {
 		category,
 		description,
@@ -37,12 +57,18 @@ const MyToysCard = ({ myToy }) => {
 							{quantity}
 						</p>
 						<div className='flex gap-4 text-xl mt-2'>
-							<Link to='/' className="bg-pink-500 hover:bg-pink-700 text-white p-2 rounded" title="Update">
+							<Link
+								to= {`/update/${_id}`}
+								className='bg-pink-500 hover:bg-pink-700 text-white p-2 rounded'
+								title='Update'>
 								<MdEdit />
 							</Link>
-							<Link to='/' className="bg-pink-500 hover:bg-pink-700 text-white p-2 rounded" title="Delete">
+							<button
+								onClick={() => handleDelete(_id)}
+								className='bg-pink-500 hover:bg-pink-700 text-white p-2 rounded'
+								title='Delete'>
 								<MdDelete />
-							</Link>
+							</button>
 						</div>
 					</div>
 				</div>
