@@ -14,7 +14,7 @@ const Update = () => {
 		const updatedToy = { price, quantity, description };
 		console.log(updatedToy);
 
-		fetch(`http://localhost:5000/toys/${loadedToy._id}`, {
+		fetch(`https://princess-palette-server-side.vercel.app/toys/${loadedToy._id}`, {
 			method: "PUT",
 			headers: {
 				"content-type": "application/json",

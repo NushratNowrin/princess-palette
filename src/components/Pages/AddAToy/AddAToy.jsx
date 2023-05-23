@@ -29,7 +29,7 @@ const AddAToy = () => {
 		};
 		console.log(toy);
 		// form.reset();
-		fetch("http://localhost:5000/toys", {
+		fetch("https://princess-palette-server-side.vercel.app/toys", {
 			method: "POST",
 			headers: {
 				"content-type": "application/json",

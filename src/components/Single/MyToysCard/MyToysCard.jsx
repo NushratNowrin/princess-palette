@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 const MyToysCard = ({ myToy }) => {
 	const [myToys, setMyToys] = useState(myToy);
 	const handleDelete = (_id) => {
-		fetch(`http://localhost:5000/toys/${_id}`, {
+		fetch(`https://princess-palette-server-side.vercel.app/toys/${_id}`, {
 			method: "DELETE",
 		})
 			.then((res) => res.json())
