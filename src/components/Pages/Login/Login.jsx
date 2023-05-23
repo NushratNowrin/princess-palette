@@ -114,8 +114,8 @@ const Login = () => {
 	};
 
 	return (
-		<div className='w-50 p-10 bg-slate-300 text-center'>
-			<div className='email-pass bg-black md:w-80 m-auto p-16 rounded-md mb-10'>
+		<div className='w-50 p-10 bg-slate-200 text-center'>
+			<div className='email-pass bg-violet-900 md:w-80 m-auto p-16 rounded-md mb-10'>
 				<h4 className='text-2xl font-bold mb-6 text-red-300'>Please Login</h4>
 				<form onSubmit={getLoginData} className='login "text-white'>
 					<input
@@ -172,13 +172,13 @@ const Login = () => {
 			<div className='text-xl font-bold '>Or</div>
 			<div>
 				<button
-					className='px-12 py-4 bg-black rounded-md text-red-300 font-semibold hover:text-red-500 my-2'
+					className='px-12 py-4 bg-violet-900 rounded-md text-red-300 font-semibold hover:text-red-500 my-2'
 					onClick={loginWithGoogle}>
 					Sign in with Google
 				</button>
 				<br></br>
 				<button
-					className='px-12 py-4 bg-black rounded-md text-red-300 font-semibold hover:text-red-500 my-2'
+					className='px-12 py-4 bg-violet-900 rounded-md text-red-300 font-semibold hover:text-red-500 my-2'
 					onClick={loginWithGithub}>
 					Sign in with Github
 				</button>
