@@ -35,6 +35,15 @@ const Banner = () => {
 						<a href='#slide1' className='btn btn-circle'>
 							❮
 						</a>
+						<div className="text-center">
+							<div className='font-bold text-black text-3xl'>
+								Buy the best Makeup palette <br />
+								for your princess !!!
+							</div>
+                            <div className="h-20">
+                            <button className="bg-black text-white font-semibold px-5 py-3 rounded-md mt-5 hover:text-xl ease-in-out duration-75">Buy Now</button>
+                            </div>
+						</div>
 						<a href='#slide3' className='btn btn-circle'>
 							❯
 						</a>
@@ -46,6 +55,15 @@ const Banner = () => {
 						<a href='#slide2' className='btn btn-circle'>
 							❮
 						</a>
+						<div className="text-center ">
+							<div className='font-bold text-white text-3xl'>
+								Buy the best Makeup palette <br />
+								for your princess !!!
+							</div>
+                            <div className="h-20">
+                            <button className="bg-black text-white font-semibold px-5 py-3 rounded-md mt-5 hover:text-xl ease-in-out duration-75">Buy Now</button>
+                            </div>
+						</div>
 						<a href='#slide4' className='btn btn-circle'>
 							❯
 						</a>
@@ -57,6 +75,15 @@ const Banner = () => {
 						<a href='#slide3' className='btn btn-circle'>
 							❮
 						</a>
+						<div className="text-center">
+							<div className='font-bold text-black text-3xl'>
+								Buy the best Makeup palette <br />
+								for your princess !!!
+							</div>
+                            <div className="h-20">
+                            <button className="bg-black text-white font-semibold px-5 py-3 rounded-md mt-5 hover:text-xl ease-in-out duration-75">Buy Now</button>
+                            </div>
+						</div>
 						<a href='#slide1' className='btn btn-circle'>
 							❯
 						</a>

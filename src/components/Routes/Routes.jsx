@@ -10,6 +10,7 @@ import Register from "../Pages/Login/Register";
 import PrivateRoutes from "./PrivateRoutes";
 import Error from "../Pages/Error/Error";
 import Update from "../Single/Update/Update";
+import SingleToy from "../Shared/SingleToy/SingleToy";
 
 
 const router = createBrowserRouter([
@@ -34,6 +35,12 @@ const router = createBrowserRouter([
 			{
 				path: "/update/:id",
 				element: <Update></Update>,
+				loader: ({params}) => fetch(`https://princess-palette-server-side.vercel.app/toys/${params.id}`)
+
+			},
+			{
+				path: "/toys/:id",
+				element: <SingleToy></SingleToy>,
 				loader: ({params}) => fetch(`https://princess-palette-server-side.vercel.app/toys/${params.id}`)
 
 			},

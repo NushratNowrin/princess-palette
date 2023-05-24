@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import Category from "./Category";
+import "./Shop.css";
 
 const Shop = () => {
     const [allToys, setAllToys] = useState([])
@@ -35,8 +36,17 @@ const Shop = () => {
 
 	return (
 		<div className="px-10 py-16 min-h-min">
+            <div className="text-center text-black mb-10 tracking-wide">
+				<h2 className='mb-3 text-xl font-bold'>
+					Watch by Category
+				</h2>
+				<p className="text-xs font-thin">
+					Your Little Princess deserve the best. <br />
+					So search the best Toy Place which will be surprising for her.
+				</p>
+			</div>
 			<Tabs>
-				<TabList className="flex justify-between border border-black">
+				<TabList className="flex justify-center ">
 					<Tab>Lip Stick</Tab>
 					<Tab>Makeup Box</Tab>
 					<Tab>Mirror Set</Tab>
