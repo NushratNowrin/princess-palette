@@ -17,12 +17,12 @@ const SingleToy = () => {
 	} = singleToy;
     return (
         <div>
-            <div className='hero-content flex-col justify-center items-center gap-10 bg-base-200  m-5 lg:p-5 lg:flex-row rounded'>
+            <div className='hero-content flex-col justify-center items-center gap-10 bg-base-200  m-5 lg:p-20 lg:flex-row rounded'>
 					<div className="">
-                    <img src={image} className='w-80 rounded-lg shadow-2xl' />
+                    <img src={image} className='w-full rounded-lg shadow-2xl' />
                     </div>
 					<div className="text-sm">
-						<h1 className='text-md font-bold'>{name}</h1>
+						<h1 className='text-lg font-bold'>{name}</h1>
 						<p className='py-1'>
 							<span className='font-bold'>Seller: </span>
 							{sellerName}

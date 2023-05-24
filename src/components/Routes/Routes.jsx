@@ -40,7 +40,7 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "/toys/:id",
-				element: <SingleToy></SingleToy>,
+				element: <PrivateRoutes><SingleToy></SingleToy></PrivateRoutes>,
 				loader: ({params}) => fetch(`https://princess-palette-server-side.vercel.app/toys/${params.id}`)
 
 			},
