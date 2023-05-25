@@ -1,9 +1,16 @@
-.react-tabs__tab--selected{
-    background-color: #4C1D95 !important;
-    color: white
+.react-tabs__tab--selected {
+	background-color: #4c1d95 !important;
+	color: white;
 }
-.react-tabs__tab{
-    font-weight: 600;
-    padding: 15p;
-    border: 1px solid black
+.react-tabs__tab {
+	font-weight: 600;
+	padding: 15px 30px;
+	border: 1px solid black;
+}
+
+/* Responsive */
+@media only screen and (max-width: 600px) {
+	.react-tabs__tab {
+		padding: 15px;
+	}
 }

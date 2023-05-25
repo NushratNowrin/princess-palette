@@ -3,5 +3,12 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 90vh;
+    padding: 100px 200px;
 }
+
+/* Responsive */
+@media only screen and (max-width: 600px) {
+    .discount{
+        padding: 50px;
+    }
+  }
