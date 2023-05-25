@@ -33,8 +33,7 @@ const Category = ({ category }) => {
 					<h2 className='font-bold text-md'>{name}</h2>
 					<p><span className="font-semibold">Price: </span>{price}</p>
 					<p><span className="font-semibold">Ratings: </span>{rating}</p>
-					<Link onClick={()=>alertbtn} to= {`/toys/${_id}`} >
-						
+					<Link onMouseOver={alertbtn()} to= {`/toys/${_id}`} >	
 					<div className='card-actions justify-center'>
 						<button className='btn btn-primary'>View Details</button>
 					</div>

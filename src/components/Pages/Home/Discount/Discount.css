@@ -1,0 +1,7 @@
+.discount{
+    background-image: url('../../../../assets/Discount.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+}

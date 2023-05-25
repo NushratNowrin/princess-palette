@@ -61,7 +61,7 @@ const Banner = () => {
 								for your princess !!!
 							</div>
                             <div className="h-20">
-                            <button className="bg-black text-white font-semibold px-5 py-3 rounded-md mt-5 hover:text-xl ease-in-out duration-75">Buy Now</button>
+                            <button className="bg-white text-black font-semibold px-5 py-3 rounded-md mt-5 hover:text-xl ease-in-out duration-75">Buy Now</button>
                             </div>
 						</div>
 						<a href='#slide4' className='btn btn-circle'>

@@ -46,7 +46,7 @@ const Shop = () => {
 				</p>
 			</div>
 			<Tabs>
-				<TabList className="flex justify-center ">
+				<TabList className="text-sm flex justify-center ">
 					<Tab>Lip Stick</Tab>
 					<Tab>Makeup Box</Tab>
 					<Tab>Mirror Set</Tab>
@@ -54,7 +54,7 @@ const Shop = () => {
 				</TabList>
 
 				<TabPanel>
-                    <div className="grid grid-cols-3 gap-5">
+                    <div className="md:grid grid-cols-3 gap-5">
                     {
                         lipsticks.map(lipstick => 
                             <Category
@@ -65,7 +65,7 @@ const Shop = () => {
                     </div>
 				</TabPanel>
 				<TabPanel>
-                    <div className="grid grid-cols-3 gap-5">
+                    <div className="md:grid grid-cols-3 gap-5">
                     {
                         makeupboxs.map(makeupbox => 
                             <Category
@@ -76,7 +76,7 @@ const Shop = () => {
                     </div>
 				</TabPanel>
 				<TabPanel>
-                    <div className="grid grid-cols-3 gap-5">
+                    <div className="md:grid grid-cols-3 gap-5">
                     {
                         mirrors.map(mirror => 
                             <Category
@@ -87,7 +87,7 @@ const Shop = () => {
                     </div>
 				</TabPanel>
 				<TabPanel>
-                    <div className="grid grid-cols-3 gap-5">
+                    <div className="md:grid grid-cols-3 gap-5">
                     {
                         combs.map(comb => 
                             <Category
