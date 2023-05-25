@@ -13,11 +13,19 @@ const MyToysCard = ({ myToy }) => {
 			.then((data) => {
 				if (data.deletedCount > 0) {
 					Swal.fire({
-						title: "Delete",
-						text: "Toy has been deleted Successfully",
-						icon: "delete",
-						confirmButtonText: "Okay",
+						title: "Are you sure?",
+						text: "You won't be able to revert this!",
+						icon: "warning",
+						showCancelButton: true,
+						confirmButtonColor: "#3085d6",
+						cancelButtonColor: "#d33",
+						confirmButtonText: "Yes, delete it!",
+					}).then((result) => {
+						if (result.isConfirmed) {
+							Swal.fire("Deleted!", "Your file has been deleted.", "success");
+						}
 					});
+
 					const remaining = myToy.filter((Toy) => Toy._id !== _id);
 					setMyToys(remaining);
 				}
@@ -58,7 +66,7 @@ const MyToysCard = ({ myToy }) => {
 						</p>
 						<div className='flex gap-4 text-xl mt-2'>
 							<Link
-								to= {`/update/${_id}`}
+								to={`/update/${_id}`}
 								className='bg-pink-500 hover:bg-pink-700 text-white p-2 rounded'
 								title='Update'>
 								<MdEdit />
