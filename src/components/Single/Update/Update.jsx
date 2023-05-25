@@ -1,10 +1,12 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import useTitle from "../../hooks/useTitle";
 
 const Update = () => {
 	const loadedToy = useLoaderData();
-	console.log(loadedToy._id);
+	// console.log(loadedToy._id);
+	useTitle('Update')
 	const handleUpdate = (event) => {
 		event.preventDefault();
 		const form = event.target;

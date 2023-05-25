@@ -4,6 +4,7 @@ import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 import { useContext } from "react";
 import "./Login.css"
 import { AuthContext } from "../../Provider/AuthProviders";
+import useTitle from "../../hooks/useTitle";
 
 
 const Register = () => {
@@ -13,6 +14,7 @@ const Register = () => {
 	const [passwordInput, setPasswordInput] = useState("");
 
 	const { user, createUser } = useContext(AuthContext);
+	useTitle('Register')
 
 	const togglePassword = () => {
 		if (passwordType === "password") {

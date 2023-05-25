@@ -12,6 +12,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProviders";
 import app from "../../../../Firebase/firebase.config";
 import { getAuth, sendPasswordResetEmail } from "firebase/auth";
+import useTitle from "../../hooks/useTitle";
 
 
 const Login = () => {
@@ -25,7 +26,7 @@ const Login = () => {
 	const navigate = useNavigate();
 	const location = useLocation();
 	const { login, signInWithGoogle, signInWithGithub } = useContext(AuthContext);
-
+	useTitle('Login');
 	const from = location.state?.from?.pathname || "/";
 
 	// Spinner

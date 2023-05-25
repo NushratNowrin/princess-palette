@@ -2,11 +2,13 @@ import React, { useContext, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProviders';
 import MyToysCard from '../../Single/MyToysCard/MyToysCard';
+import useTitle from '../../hooks/useTitle';
 
 const MyToys = () => {
     var myToys = [];
     const allToys = useLoaderData();
     const { user } = useContext(AuthContext);
+    useTitle('My Toys');
     const myEmail = user?.email;
     for (const email in allToys) {
 		const myAllToys = allToys.filter((singleToy) => singleToy?.email === myEmail);

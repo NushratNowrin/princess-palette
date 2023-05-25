@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import { useNavigation } from "react-router-dom";
 import Spinner from "../../Spinner/Spinner";
+import useTitle from "../../hooks/useTitle";
 
 const Blogs = () => {
 	const [isOpen1, setIsOpen1] = useState(false);
 	const [isOpen2, setIsOpen2] = useState(false);
 	const [isOpen3, setIsOpen3] = useState(false);
 	const [isOpen4, setIsOpen4] = useState(false);
+
+	useTitle('Blogs');
 
 	// spinner
 	const navigation = useNavigation();

@@ -1,8 +1,10 @@
 import React from "react";
 import error from "../../../assets/error_page.png";
 import { Link } from "react-router-dom";
+import useTitle from "../../hooks/useTitle";
 
 const Error = () => {
+	useTitle('Error')
 	return (
 		<div className='bg-violet-100 h-[100vh]'>
 			<div className='grid justify-center '>
