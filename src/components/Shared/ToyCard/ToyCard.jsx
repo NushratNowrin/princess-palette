@@ -19,7 +19,7 @@ const ToyCard = ({ toy }) => {
 			<div className=''>
 				<div className='hero-content flex-col bg-base-200 lg:h-80 gap-5 m-5 lg:p-5 lg:flex-row rounded'>
 					<div className="">
-                    <img src={image} className='w-40 h-52 rounded-lg shadow-2xl' />
+                    <img src={image} className='w-48 h-52 rounded-lg shadow-2xl' />
                     </div>
 					<div className="text-sm">
 						<h1 className='text-md font-bold'>{name}</h1>
