@@ -1,0 +1,6 @@
+.menu-item{
+    transition: color 0.3s ease-in-out;
+}
+.menu-item:hover{
+	color: yellow;
+}
