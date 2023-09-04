@@ -24,8 +24,8 @@ const Customer = () => {
 	return (
 		<section className='review py-16 px-10'>
 			<div>
-				<h2 className={`${styles.primaryHeader}`}>Our Toys Image Galley</h2>
-				<p className={`${styles.secondaryHeader}`}>
+				<h2 className={`${styles.primaryHeader} text-gray-800`}>Our Toys Image Galley</h2>
+				<p className={`${styles.secondaryHeader} text-gray-700`}>
 					Your Little Princess deserve the best. <br />
 					So search the best Toy Place which will be surprising for her.
 				</p>
@@ -59,14 +59,17 @@ const Customer = () => {
 										<img src={review.img} className=' ' alt='' />
 									</div>
 									<div className='flex flex-col justify-center items-center mx-10 text-center'>
-										<h2 className='text-xl font-semibold'>{review.name}</h2>
+										<h2 className='text-3xl font-semibold text-amber-400 mb-3'>{review.name}</h2>
 										<p>{review.review}</p>
+										<button className={`${styles.primaryButton}`}>Learn More</button>
 									</div>
 								</div>
 							</SwiperSlide>
 						))}
 					</Swiper>
+					
 				</div>
+				
 			</div>
 		</section>
 	);
