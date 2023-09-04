@@ -36,7 +36,7 @@ const Faq = () => {
 					<h3>
                     What is Princess Palette?
 					</h3>
-					<span className="mr-3">{isOpen1 ? "-" : "+"}</span>
+					<span>{isOpen1 ? "-" : "+"}</span>
 				</div>
 				{isOpen1 && (
 					<div className='text-sm accordion-content bg-violet-200 py-3 px-8'>
