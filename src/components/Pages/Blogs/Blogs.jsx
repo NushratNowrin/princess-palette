@@ -30,7 +30,7 @@ const Blogs = () => {
 		setIsOpen4(!isOpen4);
 	};
 	return (
-		<div className='py-10 px-20 my-10 bg-violet-400'>
+		<div className='py-10 pt-32 px-20  bg-violet-400'>
 			<h2 className='text-xl font-semibold text-black text-center mb-5'>
 				Some Important Questions
 			</h2>
