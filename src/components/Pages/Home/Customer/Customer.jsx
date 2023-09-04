@@ -1,60 +1,75 @@
-import React from 'react';
-import customer1 from "../../../../assets/customer-1.jpg";
-import customer2 from "../../../../assets/customer-2.jpg";
-import customer3 from "../../../../assets/customer-3.jpg";
-import customer4 from "../../../../assets/customer-4.jpg";
+import React, { useEffect, useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-cube";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "./Customer.css";
+
+import { styles } from "../../../Style/style";
+
+// import required modules
+import { Autoplay, EffectCube, Pagination,  Navigation } from "swiper/modules";
 
 const Customer = () => {
-    return (
-        <div>
-            <div className='my-10'>
-				<h2 className='bg-violet-900 text-white py-5 font-semibold text-2xl text-center tracking-wide rounded-t-lg'>
-					Customer&lsquo;s Review
-				</h2>
-				<div className='bg-neutral-100 rounded-b-lg grid sm:grid-cols-4 gap-8 p-8 pb-16 items-center justify-center'>
-					<div className='bg-stone-300 text-center p-5 sm:m-0 mx-12 my-6 rounded-lg'>
-						<div className='sm:h-40 w-40 sm:w-auto overflow-hidden flex items-center mx-auto rounded-full'>
-							<img src={customer1} alt='' />
-						</div>
-						<h3 className='py-2 font-semibold'>Robin</h3>
-						<p className='text-stone-600 text-xs font-medium'>
-							Their behavior and delivery is soo good
-						</p>
-					</div>
-					<div className='bg-stone-300 text-center p-5 sm:m-0 mx-12 my-6 rounded-lg'>
-						<div className='sm:h-40 w-40 sm:w-auto overflow-hidden flex items-center mx-auto rounded-full'>
-							<img src={customer2} alt='' />
-						</div>
-						<h3 className='py-2 font-semibold'>Bobin</h3>
-						<p className='text-stone-600 text-xs font-medium'>
-							The product and quality was speechless.
-						</p>
-					</div>
-					<div className='bg-stone-300 text-center p-5 sm:m-0 mx-12 my-6 rounded-lg'>
-					<div className='sm:h-40 w-40 sm:w-auto overflow-hidden flex items-center mx-auto rounded-full'>
-							<img
-								src={customer3}
-								alt=''
-							/>
-						</div>
-						<h3 className='py-2 font-semibold'>Ritu</h3>
-						<p className='text-stone-600 text-xs font-medium'>
-							The Toys marketplace I have ever seen.
-						</p>
-					</div>
-					<div className='bg-stone-300 text-center p-5 sm:m-0 mx-12 my-6 rounded-lg'>
-					<div className='sm:h-40 w-40 sm:w-auto overflow-hidden flex items-center mx-auto rounded-full'>
-							<img src={customer4} alt='' />
-						</div>
-						<h3 className='py-2 font-semibold'>Mitu</h3>
-						<p className='text-stone-600 text-xs font-medium'>
-							Always trusted and qualityfull service.
-						</p>
-					</div>
+	const [reviews, setReviews] = useState([]);
+	useEffect(() => {
+		fetch("/review.json")
+			.then((res) => res.json())
+			.then((data) => setReviews(data));
+	}, []);
+	return (
+		<section className='review py-16 px-10'>
+			<div>
+				<h2 className={`${styles.primaryHeader}`}>Our Toys Image Galley</h2>
+				<p className={`${styles.secondaryHeader}`}>
+					Your Little Princess deserve the best. <br />
+					So search the best Toy Place which will be surprising for her.
+				</p>
+			</div>
+			{/* slider */}
+			<div className=' my-5 w-full'>
+				<div className='lg:w-3/5 sm:2/3 w-11/12 mx-auto '>
+					<Swiper
+					autoplay={{
+						delay: 2500,
+						disableOnInteraction: true,
+					}}
+						effect={"cube"}
+						grabCursor={true}
+						cubeEffect={{
+							shadow: true,
+							slideShadows: true,
+							shadowOffset: 20,
+							shadowScale: 0.94,
+						}}
+						pagination={{
+							clickable: true,
+						}}
+						navigation={true}
+						modules={[Autoplay, Pagination, EffectCube,  Navigation]}
+						className='mySwiper'>
+						{reviews.map((review) => (
+							<SwiperSlide key={review.id}>
+								<div className='bg-blue-700 flex flex-col justify-center items-center py-8 pb-10 lg:mx-20 my-10 rounded-2xl bg-opacity-80 text-white mb-16'>
+									<div className='flex justify-center items-center  mb-5 rounded-full border-2 border-black overflow-hidden h-52 w-52 p-2 bg-white'>
+										<img src={review.img} className=' ' alt='' />
+									</div>
+									<div className='flex flex-col justify-center items-center mx-10 text-center'>
+										<h2 className='text-xl font-semibold'>{review.name}</h2>
+										<p>{review.review}</p>
+									</div>
+								</div>
+							</SwiperSlide>
+						))}
+					</Swiper>
 				</div>
 			</div>
-        </div>
-    );
+		</section>
+	);
 };
 
 export default Customer;
