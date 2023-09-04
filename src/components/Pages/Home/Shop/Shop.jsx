@@ -36,7 +36,7 @@ const Shop = () => {
 
 
 	return (
-		<div className=" py-16 lg:px-40 px-10 bg-pink-100">
+		<div className=" py-16 lg:px-40 px-10 bg-pink-50">
             <div className="text-center mb-10 tracking-wide">
 				<h2 className={`${styles.primaryHeader}`}>
 					Watch by Category
