@@ -24,7 +24,7 @@ const Faq = () => {
         <div className='faq lg:px-40 lg:py-20 sm:px-20 sm:py-10 p-5'>
             <div className='sm:p-20 p-10 bg-violet-950 bg-opacity-30'>
 			<div>
-				<h2 className={`${styles.primaryHeader} text-gray-200`}>Frequently Asked Question</h2>
+				<h2 className={`md:text-3xl text-xl font-semibold tracking-wide mb-5 text-center text-gray-200`}>Frequently Asked Question</h2>
 				<p className={`${styles.secondaryHeader} text-white`}>
 					Have you Any Question? That can be related with our previous customers Question
 				</p>

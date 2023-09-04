@@ -25,7 +25,7 @@ const Category = ({ category }) => {
 						alt=''
 					/>
 				</figure>
-				<div className='card-body text-center bg-slate-300'>
+				<div className='card-body text-center bg-slate-300 h-60'>
 					<h2 className='font-bold text-md'>{name}</h2>
 					<p><span className="font-semibold">Price: </span>{price}</p>
 					<p><span className="font-semibold">Ratings: </span>{rating}</p>

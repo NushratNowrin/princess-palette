@@ -27,7 +27,7 @@ const Customer = () => {
 			</div> */}
 			<div className="flex flex-col z-50">
 				<h2 className={`${styles.primaryHeader} text-gray-800`}>What Our Customer Said</h2>
-				<p className={`${styles.secondaryHeader} text-gray-700`}>
+				<p className={`text-neutral-700 md:text-base text-sm mb-10 text-center`}>
 					Your Little Princess deserve the best. <br />
 					So search the best Toy Place which will be surprising for her.
 				</p>

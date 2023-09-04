@@ -15,7 +15,7 @@ const Love = () => {
             <div className='md:p-20 p-10 bg-violet-800 bg-opacity-70'>
             <div >
 				<h2 className='md:text-3xl text-xl font-semibold tracking-wide mb-5 text-center text-gray-200'>Why Love Us?</h2>
-				<p className={`${styles.secondaryHeader} text-gray-100`}>
+				<p className={`text-neutral-200 md:text-base text-sm mb-10 text-center`}>
                 We&apos;re a world of imagination, creativity, and endless fun
 				</p>
 			</div>
