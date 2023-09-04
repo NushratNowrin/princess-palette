@@ -3,6 +3,7 @@ import slider1 from "../../../../assets/slider-1.jpg";
 import slider2 from "../../../../assets/slider-2.jpg";
 import slider3 from "../../../../assets/slider-3.png";
 import slider4 from "../../../../assets/slider-4.png";
+import { styles } from "../../../Style/style";
 
 const Banner = () => {
 	return (
@@ -40,7 +41,7 @@ const Banner = () => {
 								for your princess !!!
 							</div>
                             <div className="h-20">
-                            <button className="bg-violet-900 bg-opacity-60 text-white font-semibold px-5 py-3 rounded-md mt-5 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-opacity-100 duration-300">Buy Now</button>
+                            <button className={`${styles.primaryButton}`}>Buy Now</button>
                             </div>
 						</div>
 						<a href='#slide3' className='btn btn-circle'>

@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProviders";
+import { styles } from "../../../Style/style";
 
 const Category = ({ category }) => {
 	const { user } = useContext(AuthContext);
@@ -17,10 +18,10 @@ const Category = ({ category }) => {
 	} = category;
 	return (
 		<div>
-			<div className='card card-compact p-3 shadow-xl my-5'>
-				<figure className="bg-white">
+			<div className='card shadow-xl my-16 bg-white'>
+				<figure className="bg-white py-5">
 					<img
-						src={image} className="h-40 rounded-lg"
+						src={image} className="w-52 rounded-lg"
 						alt=''
 					/>
 				</figure>
@@ -30,7 +31,7 @@ const Category = ({ category }) => {
 					<p><span className="font-semibold">Ratings: </span>{rating}</p>
 					<Link to= {`/toys/${_id}`} >	
 					<div className='card-actions justify-center'>
-						<button className='btn btn-primary'>View Details</button>
+						<button className={`${styles.primaryButton}`}>View Details</button>
 					</div>
 					</Link>
 					
