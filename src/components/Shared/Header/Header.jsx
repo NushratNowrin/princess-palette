@@ -91,7 +91,7 @@ const Header = () => {
 								</div>
 							</div>
 						) : (
-							<button className=' bg-black bg-opacity-60 text-neutral-200 px-5 py-2 font-bold rounded-md hover:bg-opacity-90'>
+							<button className=' bg-black bg-opacity-60 text-neutral-200 px-5 py-2 font-bold rounded-md hover:bg-opacity-90 mx-8'>
 								<ActiveLink to='/login'>Login</ActiveLink>
 							</button>
 						)}
