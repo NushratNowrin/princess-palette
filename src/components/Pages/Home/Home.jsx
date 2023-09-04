@@ -7,15 +7,17 @@ import Discount from './Discount/Discount';
 import Customer from './Customer/Customer';
 import Faq from './Faq/Faq';
 import Love from './Love/Love';
+import About from './About/About';
 
 const Home = () => {
     useTitle('Home')
     return (
         <div>
             <Banner></Banner>
+            <About></About>
             <Shop></Shop>
-            <Gallery></Gallery>
             <Love></Love>
+            <Gallery></Gallery>
             <Discount></Discount>
             <Customer></Customer>
             <Faq></Faq>
