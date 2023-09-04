@@ -22,9 +22,11 @@ const Customer = () => {
 			.then((data) => setReviews(data));
 	}, []);
 	return (
-		<section className='review py-16 px-10'>
-			<div>
-				<h2 className={`${styles.primaryHeader} text-gray-800`}>Our Toys Image Galley</h2>
+		<section className='relative review py-16 px-10 '>
+			{/* <div className="bg-black absolute top-0 bottom-0 left-0 right-0 bg-opacity-30">	
+			</div> */}
+			<div className="flex flex-col z-50">
+				<h2 className={`${styles.primaryHeader} text-gray-800`}>What Our Customer Said</h2>
 				<p className={`${styles.secondaryHeader} text-gray-700`}>
 					Your Little Princess deserve the best. <br />
 					So search the best Toy Place which will be surprising for her.
