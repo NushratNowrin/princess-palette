@@ -6,6 +6,7 @@ import useTitle from '../../hooks/useTitle';
 import Discount from './Discount/Discount';
 import Customer from './Customer/Customer';
 import Faq from './Faq/Faq';
+import Love from './Love/Love';
 
 const Home = () => {
     useTitle('Home')
@@ -14,6 +15,7 @@ const Home = () => {
             <Banner></Banner>
             <Shop></Shop>
             <Gallery></Gallery>
+            <Love></Love>
             <Discount></Discount>
             <Customer></Customer>
             <Faq></Faq>
