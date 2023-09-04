@@ -18,7 +18,7 @@ const Category = ({ category }) => {
 	} = category;
 	return (
 		<div>
-			<div className='card shadow-xl my-16 bg-white'>
+			<div className='card shadow-xl md:my-16 my-5 bg-white'>
 				<figure className="bg-white py-5">
 					<img
 						src={image} className="h-52 rounded-lg"

@@ -5,16 +5,16 @@ import { styles } from "../../../Style/style";
 
 const About = () => {
 	return (
-		<div className='py-20 lg:px-32 md:px-20 sm:px-32 px-10 bg-gray-100 '>
-			<div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 justify-center items-center border shadow-xl'>
+		<div className='py-20 lg:px-28 md:px-20 sm:px-32 px-10 bg-gray-100 '>
+			<div className='bg-white grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 justify-center items-center border shadow-xl p-8'>
             <div className='lg:flex hidden'>
 					<img src={Aboutbg2} alt='' className='w-100' />
 				</div>
 				
-				<div className="text-center">
+				<div className="text-center p-8">
 					<div className="">
-						<h2 className={`${styles.primaryHeader} mb-2`}>About Us</h2>
-						<p className={`${styles.secondaryHeader} mb-3 text-pink-600`}>
+						<h2 className={`md:text-3xl text-xl font-semibold tracking-wide mb-2 text-center text-violet-800`}>About Us</h2>
+						<p className={`${styles.secondaryHeader} mb-3 text-pink-600 text-sm`}>
                         Welcome to Princess Palette - Where Imagination Meets Glamour!
 						</p>
 					</div>
