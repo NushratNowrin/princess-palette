@@ -55,7 +55,7 @@ const AddAToy = () => {
 	};
 	return (
 		<div>
-			<div className='hero min-h-screen bg-base-200'>
+			<div className='hero min-h-screen pt-32 bg-base-200'>
 				<div className='hero-content flex-col lg:flex-column'>
 					<div className='text-center lg:text-left'>
 						<h1 className='text-5xl text-center font-bold'>Add a Toy!</h1>
