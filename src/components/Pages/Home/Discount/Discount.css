@@ -1,6 +1,6 @@
 .discount{
-    background-image: url('../../../../assets/Discount.jpg');
-    background-position: center;
+    background-image: url('../../../../assets/Discount.png');
+    background-position: 0 0; ;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 100px 200px;
