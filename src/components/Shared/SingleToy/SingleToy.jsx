@@ -16,10 +16,10 @@ const SingleToy = () => {
 		_id,
 	} = singleToy;
     return (
-        <div>
-            <div className='hero-content flex-col justify-center items-center gap-10 bg-base-200  m-5 lg:p-20 lg:flex-row rounded'>
-					<div className="">
-                    <img src={image} className='w-full rounded-lg shadow-2xl' />
+    <div className='pt-32'>
+            <div className=' grid sm:grid-cols-2 grid-cols-1 justify-center items-center gap-10 bg-base-200  lg:p-20 rounded'>
+					<div className=" ">
+                    <img src={image} className=' rounded-lg shadow-2xl' />
                     </div>
 					<div className="text-sm">
 						<h1 className='text-lg font-bold'>{name}</h1>

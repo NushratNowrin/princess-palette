@@ -17,7 +17,7 @@ const MyToys = () => {
 	}
     console.log(myToys)
     return (
-        <div className="grid grid-cols-2 min-h-[120px]">
+        <div className="grid grid-cols-2 pt-32 min-h-[120px]">
             {
                 myToys.map(myToy =>
                     <MyToysCard 
