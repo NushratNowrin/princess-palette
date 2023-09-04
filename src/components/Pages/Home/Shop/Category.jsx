@@ -17,14 +17,14 @@ const Category = ({ category }) => {
 	} = category;
 	return (
 		<div>
-			<div className='card card-compact p-3 bg-slate-300 shadow-xl my-5'>
-				<figure>
+			<div className='card card-compact p-3 shadow-xl my-5'>
+				<figure className="bg-white">
 					<img
 						src={image} className="h-40 rounded-lg"
 						alt=''
 					/>
 				</figure>
-				<div className='card-body text-center'>
+				<div className='card-body text-center bg-slate-300'>
 					<h2 className='font-bold text-md'>{name}</h2>
 					<p><span className="font-semibold">Price: </span>{price}</p>
 					<p><span className="font-semibold">Ratings: </span>{rating}</p>

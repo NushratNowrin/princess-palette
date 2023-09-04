@@ -3,6 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import Category from "./Category";
 import "./Shop.css";
+import { styles } from "../../../Style/style";
 
 const Shop = () => {
     const [allToys, setAllToys] = useState([])
@@ -35,26 +36,26 @@ const Shop = () => {
 
 
 	return (
-		<div className="px-10 py-16 min-h-min">
-            <div className="text-center text-black mb-10 tracking-wide">
-				<h2 className='mb-3 text-xl font-bold'>
+		<div className=" py-16 lg:px-40 px-10 bg-pink-100">
+            <div className="text-center mb-10 tracking-wide">
+				<h2 className={`${styles.primaryHeader}`}>
 					Watch by Category
 				</h2>
-				<p className="text-xs font-thin">
+				<p className={`${styles.secondaryHeader}`}>
 					Your Little Princess deserve the best. <br />
 					So search the best Toy Place which will be surprising for her.
 				</p>
 			</div>
 			<Tabs>
-				<TabList className="text-sm flex justify-center ">
-					<Tab>Lip Stick</Tab>
-					<Tab>Makeup Box</Tab>
+				<TabList className="text-sm  flex justify-center ">
+					<Tab >Lip Stick</Tab>
+					<Tab >Makeup Box</Tab>
 					<Tab>Mirror Set</Tab>
 					<Tab>Comb Set</Tab>
 				</TabList>
 
 				<TabPanel>
-                    <div className="md:grid grid-cols-3 gap-5">
+                    <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
                     {
                         lipsticks.map(lipstick => 
                             <Category
@@ -65,7 +66,7 @@ const Shop = () => {
                     </div>
 				</TabPanel>
 				<TabPanel>
-                    <div className="md:grid grid-cols-3 gap-5">
+                    <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
                     {
                         makeupboxs.map(makeupbox => 
                             <Category
@@ -76,7 +77,7 @@ const Shop = () => {
                     </div>
 				</TabPanel>
 				<TabPanel>
-                    <div className="md:grid grid-cols-3 gap-5">
+                    <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
                     {
                         mirrors.map(mirror => 
                             <Category
@@ -87,7 +88,7 @@ const Shop = () => {
                     </div>
 				</TabPanel>
 				<TabPanel>
-                    <div className="md:grid grid-cols-3 gap-5">
+                    <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
                     {
                         combs.map(comb => 
                             <Category
