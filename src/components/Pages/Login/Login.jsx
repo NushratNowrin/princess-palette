@@ -13,6 +13,7 @@ import { AuthContext } from "../../Provider/AuthProviders";
 import app from "../../../../Firebase/firebase.config";
 import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 import useTitle from "../../hooks/useTitle";
+import { styles } from "../../Style/style";
 
 
 const Login = () => {
@@ -156,13 +157,13 @@ const Login = () => {
 						<input
 							type='submit'
 							value='Login'
-							className=' bg-red-300 px-5 py-2 font-bold text-black rounded-lg hover:bg-red-600 hover:text-lg ease-in-out duration-300'
+							className={`${styles.primaryButton} bg-gray-400`}
 						/>
 					</div>
 				</form><br></br>
 
-				<p>
-					<small className='text-white font-semibold'>
+				<p className="mt-5">
+					<small className='text-white  font-semibold'>
 						Forgot password? Please{" "}
 						<button className='text-yellow-300' onClick={forgetPassword}>
 							Reset Password

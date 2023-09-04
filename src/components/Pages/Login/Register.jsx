@@ -5,6 +5,7 @@ import { useContext } from "react";
 import "./Login.css"
 import { AuthContext } from "../../Provider/AuthProviders";
 import useTitle from "../../hooks/useTitle";
+import { styles } from "../../Style/style";
 
 
 const Register = () => {
@@ -68,9 +69,9 @@ const Register = () => {
 	};
 
 	return (
-		<div className='w-50 p-10 bg-slate-300 text-center'>
-			<div className='bg-violet-900 md:w-8/12 m-auto py-16 md:px-20 rounded mb-10'>
-				<h4 className='text-2xl font-bold mb-6 text-red-300'>Please Register</h4>
+		<div className='w-50 xs:p-10 bg-slate-300 text-center pt-32 pb-10'>
+			<div className='bg-violet-900 md:w-8/12 m-auto py-16 md:px-20 p-10 rounded w-full'>
+				<h4 className='lg:w-2/5 sm:w-3/5 w-2/3 mx-auto text-2xl font-bold mb-6 text-red-300'>Please Register</h4>
 				<form onSubmit={getFormData}>
 					<input
 						type='text'
@@ -78,7 +79,7 @@ const Register = () => {
 						id='name'
 						placeholder='Enter Name'
 						required
-						className='py-1 px-3 rounded my-2'
+						className='py-1 px-3 rounded-l my-2 w-full'
 					/>
 					<br />
 					<input
@@ -87,7 +88,7 @@ const Register = () => {
 						id='email'
 						placeholder='Enter Email Address'
 						required
-						className='py-1 px-3 rounded my-2'
+						className='py-1 px-3 rounded-l my-2 w-full'
 					/>
 					<br />
 					<div className='flex items-center justify-center'>
@@ -99,7 +100,7 @@ const Register = () => {
 							id='password'
 							placeholder='Enter Password'
 							required
-							className='py-1 w-3/5 md:w-2/5 px-3 rounded-l my-2'
+							className='py-1 px-3 rounded-l my-2 w-full'
 						/>
 						<span onClick={togglePassword}>
 							{passwordType === "password" ? (
@@ -115,7 +116,7 @@ const Register = () => {
 						name='photoURL'
 						id='photoURL'
 						placeholder='Insert your Photo URL'
-						className='py-1 px-3 rounded my-2'
+						className='py-1 px-3 rounded-l my-2 w-full'
 					/>
 					<div className='text-yellow-300 font-bold'>{showError}</div>
 					<div className='text-green-400 font-semibold'>{success}</div><br></br>
@@ -123,12 +124,12 @@ const Register = () => {
 						<input
 							type='submit'
 							value='Register'
-							className=' bg-red-300 px-5 py-2 font-bold text-black rounded-lg hover:bg-red-600 hover:text-lg ease-in-out duration-300'
+							className={`${styles.primaryButton} bg-gray-400`}
 						/>
 					</div>
 				</form><br></br>
 
-				<div className='text-white'>
+				<div className='text-white mt-5'>
 					Already have an account? Please{" "}
 					<Link to='../login' className='font-semibold text-yellow-300'>
 						Login
