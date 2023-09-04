@@ -21,7 +21,7 @@ const Category = ({ category }) => {
 			<div className='card shadow-xl my-16 bg-white'>
 				<figure className="bg-white py-5">
 					<img
-						src={image} className="w-52 rounded-lg"
+						src={image} className="h-52 rounded-lg"
 						alt=''
 					/>
 				</figure>
