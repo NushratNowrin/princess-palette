@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { styles } from "../../Style/style";
 
 const ToyCard = ({ toy }) => {
 	const {
@@ -45,7 +46,7 @@ const ToyCard = ({ toy }) => {
 
 							<div className='h-10'>
 								<Link to={`/toys/${_id}`}>
-									<button className='bg-pink-500 px-5 py-3 rounded-lg text-white font-semibold text-md mt-2 hover:text-lg hover:bg-pink-600 ease-in-out duration-100'>
+									<button className={`${styles.primaryButton} mt-1`}>
 										View Details
 									</button>
 								</Link>

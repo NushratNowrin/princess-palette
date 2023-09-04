@@ -14,7 +14,7 @@ const AllToys = () => {
     // console.log(toys.filter(toy => toy.name))
 	return (
 		<div>
-            <div className='text-center m-5'>
+            <div className='text-center pt-32'>
             <h2 className='text-lg font-bold text-violet-900 '>Search which you need</h2>
             <form>
                 <div>
