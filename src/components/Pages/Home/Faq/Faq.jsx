@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useNavigation } from "react-router-dom";
 import './Faq.css'
 import { styles } from "../../../Style/style";
 
